@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" " http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns=" http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="reservationstyle.css" rel="stylesheet" type="text/css" media="screen" />
+    <title>hotel operational system </title>
+<style>
+
+</style>
+
+</head>
+<body>
+    <div id="header">
+        <div id="logo">
+            <h1>ROYAL Hotel</h1>
+                  </div>
+        <div id="menu">
+
+
+        </div><hr />
+
+        <form name="form2" style="font-size:130%">
+		<br>
+		<table align="center" >
+                <tr>
+				<h2 style="text-align:center">Billing Details</h2>
+                </tr>
+                <tr>
+                    <td> Room Number:</td>
+                    <td> <input type="text" name="roomno" /> </td>
+                </tr>
+		
+                <tr>
+                    <td> Customer Name:</td>
+                       <td> <input type="text" name="name" /> </td>
+                </tr>
+
+               
+<tr>
+                    <td> CNIC/Passport:</td>
+                       <td> <input type="number" name="cnic" /> </td>
+                </tr>
+
+                <tr>
+                    <td> Room Rent: </td>
+                    <td>   <input type="text" name="num1" /> </td>
+                </tr>
+               
+				
+				<tr>
+                    <td> Restaurant Bill: </td>
+                    <td>   <input type="text" name="num2" /> </td>
+                </tr>
+				<tr>
+                    <td> Total: </td>
+                    <td>   <input type="text" name="sum" /><input type="button" value="PKR" onclick="calcSum()">
+                <br> </td>
+                </tr>
+				<tr>
+                    <td> Status: </td>
+                    <td>   <input type="text" name="name" /> </td>
+                </tr>
+				<tr>
+                    <td> Date/Time: </td>
+                    <td>   <input type="text" name="datetime" /> </td>
+                </tr>
+				<tr>
+                    <td> <br>
+				<button onclick="window.print()">Customer Bill Receipt</button> </td>
+                    
+                </tr>
+
+            </table>
+
+
+          
+                
+                    
+			
+                 
+        </form>
+
+    </div>
+	
+    <!-- end page -->
+</body>
+</html>
+
+ 
+	<script>
+    function calcSum() {
+        let num1 = document.getElementsByName("num1")[0].value;
+        let num2 = document.getElementsByName("num2")[0].value;
+        let sum = Number(num1) + Number(num2);
+        document.getElementsByName("sum")[0].value = sum;
+    }
+</script>
